@@ -36,7 +36,7 @@ permissions:
 
 defaults:
   run:
-    shell: powershell
+    shell: pwsh
 
 env:
   ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
@@ -44,7 +44,7 @@ env:
 
 jobs:
   CreateApp:
-    runs-on: [ windows-latest ]
+    runs-on: [ ubuntu-latest ]
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -53,20 +53,20 @@ jobs:
         id: init
         uses: microsoft/AL-Go-Actions/WorkflowInitialize@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           eventId: "DO0092"
 
       - name: Read settings
         uses: microsoft/AL-Go-Actions/ReadSettings@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           get: type
 
       - name: Read secrets
         id: ReadSecrets
         uses: microsoft/AL-Go-Actions/ReadSecrets@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           gitHubSecrets: ${{ toJson(secrets) }}
           getSecrets: 'TokenForPush'
           useGhTokenWorkflowForPush: '${{ github.event.inputs.useGhTokenWorkflow }}'
@@ -74,7 +74,7 @@ jobs:
       - name: Creating a new app
         uses: microsoft/AL-Go-Actions/CreateApp@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           token: ${{ steps.ReadSecrets.outputs.TokenForPush }}
           parentTelemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
           project: ${{ github.event.inputs.project }}
@@ -89,6 +89,6 @@ jobs:
         if: always()
         uses: microsoft/AL-Go-Actions/WorkflowPostProcess@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           eventId: "DO0092"
           telemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}

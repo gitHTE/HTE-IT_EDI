@@ -17,7 +17,7 @@ permissions:
 
 defaults:
   run:
-    shell: powershell
+    shell: pwsh
 
 env:
   ALGoOrgSettings: ${{ vars.ALGoOrgSettings }}
@@ -25,7 +25,7 @@ env:
 
 jobs:
   Initialization:
-    runs-on: [ windows-latest ]
+    runs-on: [ ubuntu-latest ]
     outputs:
       telemetryScopeJson: ${{ steps.init.outputs.telemetryScopeJson }}
       environmentsMatrixJson: ${{ steps.DetermineDeploymentEnvironments.outputs.EnvironmentsMatrixJson }}
@@ -40,14 +40,14 @@ jobs:
         id: init
         uses: microsoft/AL-Go-Actions/WorkflowInitialize@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           eventId: "DO0097"
 
       - name: Read settings
         id: ReadSettings
         uses: microsoft/AL-Go-Actions/ReadSettings@v4.0
         with:
-          shell: powershell
+          shell: pwsh
 
       - name: Determine Deployment Environments
         id: DetermineDeploymentEnvironments
@@ -55,7 +55,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ github.token }}
         with:
-          shell: powershell
+          shell: pwsh
           getEnvironments: ${{ github.event.inputs.environmentName }}
           type: 'Publish'
 
@@ -72,7 +72,7 @@ jobs:
         uses: microsoft/AL-Go-Actions/ReadSecrets@v4.0
         if: steps.DetermineDeploymentEnvironments.outputs.UnknownEnvironment == 1
         with:
-          shell: powershell
+          shell: pwsh
           gitHubSecrets: ${{ toJson(secrets) }}
           getSecrets: '${{ steps.envName.outputs.envName }}-AuthContext,${{ steps.envName.outputs.envName }}_AuthContext,AuthContext'
 
@@ -134,13 +134,13 @@ jobs:
       - name: Read settings
         uses: microsoft/AL-Go-Actions/ReadSettings@v4.0
         with:
-          shell: powershell
+          shell: pwsh
 
       - name: Read secrets
         id: ReadSecrets
         uses: microsoft/AL-Go-Actions/ReadSecrets@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           gitHubSecrets: ${{ toJson(secrets) }}
           getSecrets: '${{ steps.envName.outputs.envName }}-AuthContext,${{ steps.envName.outputs.envName }}_AuthContext,AuthContext,${{ steps.envName.outputs.envName }}-EnvironmentName,${{ steps.envName.outputs.envName }}_EnvironmentName,EnvironmentName,projects'
 
@@ -150,7 +150,7 @@ jobs:
         env:
           Secrets: '${{ steps.ReadSecrets.outputs.Secrets }}'
         with:
-          shell: powershell
+          shell: pwsh
           environmentName: ${{ matrix.environment }}
           artifacts: ${{ github.event.inputs.appVersion }}
           type: 'Publish'
@@ -158,7 +158,7 @@ jobs:
 
   PostProcess:
     if: always()
-    runs-on: [ windows-latest ]
+    runs-on: [ ubuntu-latest ]
     needs: [ Initialization, Deploy ]
     steps:
       - name: Checkout
@@ -168,6 +168,6 @@ jobs:
         id: PostProcess
         uses: microsoft/AL-Go-Actions/WorkflowPostProcess@v4.0
         with:
-          shell: powershell
+          shell: pwsh
           eventId: "DO0097"
           telemetryScopeJson: ${{ needs.Initialization.outputs.telemetryScopeJson }}
