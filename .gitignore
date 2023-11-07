@@ -1,20 +1,34 @@
-*.app
-*.flf
-*.bclicense
-*.g.xlf
+### Defaults from microsoft/AL-Go-PTE
 .DS_Store
 Thumbs.db
-TestResults*.xml
-bcptTestResults*.json
 BuildOutput.txt
-rad.json
-.output/
 .dependencies/
 .buildartifacts/
-.alpackages/
 .packages/
-.alcache/
 .altemplates/
-.snapshots/
 cache_*
 ~$*
+#
+# Extension App-file
+*.app
+# License-file
+*.flf
+*.bclicense
+# Translation Base-file
+*.g.xlf
+#Test results file
+TestResults*.xml
+bcptTestResults*.json
+# Rapid Application Development File
+rad.json
+# Testing Output folder
+.output/
+# Symbols folder
+.alpackages/
+# Cache folder
+.alcache/
+# Snapshots folder
+.snapshots/
+#
+### HIT IT-Service
+# launch.json

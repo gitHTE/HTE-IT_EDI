@@ -1,0 +1,166 @@
+{
+  "al.enableCodeAnalysis": true,
+  "al.codeAnalyzers": [
+    // "${AppSourceCop}",
+    // "${PerTenantExtensionCop}",
+    "${CodeCop}",
+    "${UICop}"
+  ],
+  "al.packageCachePath": "./.alpackages",
+  "al.ruleSetPath": "./.codeAnalysis/HTE IT.Ruleset.json",
+  "al.compilationOptions": {
+    // "outFolder": "c:/Temp/"
+  },
+  "CRS.FileNamePattern": "<ObjectTypeShort><ObjectId>.<ObjectNameShort>.al",
+  //"CRS.FileNamePatternExtensions": "<ObjectNameShort>-<ObjectId>.<ObjectTypeShortPascalCase>.al",
+  "CRS.FileNamePatternExtensions": "<ObjectTypeShort><BaseId>-Ext<ObjectId>.<ObjectNameShort>.al",
+  "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+  "CRS.ObjectNamePrefix": "HIT ",
+  "CRS.ObjectNameSuffix": "",
+  "CRS.RemovePrefixFromFilename": true,
+  "CRS.AlSubFolderName": "src",
+  "CRS.RenameWithGit": false,
+  "CRS.OnSaveAlFileAction": "Reorganize",
+  "[al]": {
+    "editor.language.brackets": [
+      [
+        "begin",
+        "end"
+      ],
+      [
+        "repeat",
+        "until"
+      ],
+      [
+        "case",
+        "end"
+      ],
+      [
+        "{",
+        "}"
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "[",
+        "]"
+      ]
+    ],
+    "editor.language.colorizedBracketPairs": [
+      [
+        "begin",
+        "end"
+      ],
+      [
+        "repeat",
+        "until"
+      ],
+      [
+        "case",
+        "end"
+      ],
+      [
+        "{",
+        "}"
+      ],
+      [
+        "(",
+        ")"
+      ],
+      [
+        "[",
+        "]"
+      ]
+    ]
+  },
+  "alOutline.defaultAppArea": "All",
+  "alOutline.codeActionsOnSave": 
+  [
+    "SortTableFields",
+    "SortReportColumns",
+    "SortProperties",
+    "SortProcedures",
+    "SortVariables",
+    "SortPermissions",
+    "SortPermissionSetList",
+    "SortCustomizations",
+    "FormatDocument"
+  ],
+  "alOutline.codeCleanupActions": 
+  [
+    "RemoveWithStatements",
+    "AddApplicationAreas",
+    "AddToolTips",
+    "AddTableFieldCaptions",
+    "AddEnumValuesCaptions",
+    "AddObjectCaptions",
+    "FixKeywordsCase",
+    "FixIdentifiersCase",
+    "AddMissingParentheses",
+    "RemoveUnusedVariables",
+    "SortPermissions",
+    "SortPermissionSetList",
+    "SortProcedures",
+    "SortProperties",
+    "SortReportColumns",
+    "SortVariables",
+    "SortCustomizations",
+    "RemoveBeginEnd",
+    "RemoveEmptyTriggers",
+    "RemoveEmptySections",
+    "FormatDocument",
+    "MakeFlowFieldsReadOnly",
+    "AddPageFieldCaptions"
+  ],
+  "alOutline.defaultAddPageFieldCaptionsSettings": 
+  {
+    "setActionGroupsCaptions": true,
+    "setActionsCaptions": true,
+    "setFieldsCaptions": true,
+    "setGroupsCaptions": true,
+    "setLabelsCaptions": true,
+    "setPartsCaptions": true,
+    "setRepeatersCaptions": true
+  },
+  "alOutline.defaultRemoveUnusedVariablesSettings": 
+  {
+    "removeGlobalVariables": true,
+    "removeLocalMethodParameters": false,
+    "removeLocalVariables": true
+  },
+  "alOutline.defaultRemoveEmptyTriggersSettings": 
+  {
+    "ignoreComments": false,
+    "removeSubscribers": true,
+    "removeTriggers": true
+  },
+  "alOutline.defaultRemoveEmptySectionsSettings": 
+  {
+    "removeActionGroups": true,
+    "removeActions": true,
+    "ignoreComments": false
+  },
+  "alOutline.enableCodeCopFixes": true,
+  "alOutline.fixCodeCopMissingParenthesesOnSave": true,
+  "alOutline.fixCaseRemovesQuotesFromDataTypeIdentifiers": true,
+  "alOutline.promptForFilePath": true,
+  "alOutline.useTableFieldDescriptionAsToolTip": false,
+  "xliffSync.baseFile": "",
+  "xliffSync.needWorkTranslationRules": 
+  [
+    "OptionMemberCount",
+    "OptionLeadingSpaces",
+    "Placeholders",
+    "SourceEqualsTarget",
+    "ConsecutiveSpacesConsistent",
+    "ConsecutiveSpacesExist",
+    "PlaceholdersDevNote"
+  ],
+  "xliffSync.parseFromDeveloperNote": true,
+  "xliffSync.autoCheckMissingTranslations": true,
+  "xliffSync.autoCheckNeedWorkTranslations": true,
+  "xliffSync.copyFromSourceForSameLanguage": true,
+  "xliffSync.keepEditorOpenAfterSync": false
+}

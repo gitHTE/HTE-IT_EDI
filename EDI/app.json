@@ -9,23 +9,31 @@
   "EULA": "",
   "help": "",
   "url": "",
-  "logo": "",
-  "dependencies": [],
+  "logo": "./Logo/HTE_IT_Service.jpg",
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "22.0.0.0",
+  "application": "14.0.0.0",
+  "runtime": "9.0",
+  "dependencies": [],
   "idRanges": [
     {
-      "from": 50000,
-      "to": 98999
+      "from": 70000,
+      "to": 70499
     }
   ],
+  "target":"OnPrem",
   "features": [
-    "NoImplicitWith"
+    "NoImplicitWith",
+    "TranslationFile",
+    "GenerateCaptions"
   ],
   "resourceExposurePolicy": {
     "allowDebugging": true,
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": false
-  }
+  },
+  "supportedLocales": [
+    "de-DE",
+    "en-US"
+  ]
 }

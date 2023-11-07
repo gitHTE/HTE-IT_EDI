@@ -1,0 +1,10 @@
+{
+    "mandatoryAffixes": [
+        "HIT"
+    ],
+    "supportedCountries": [
+        "DE"
+    ],
+    "name": "EDI",
+    "publisher": "HTE IT-Service GmbH"
+}
