@@ -32,3 +32,4 @@ rad.json
 #
 ### HIT IT-Service
 # launch.json
+*.save

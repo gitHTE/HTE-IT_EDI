@@ -13,7 +13,7 @@
   "screenshots": [],
   "platform": "1.0.0.0",
   "application": "14.0.0.0",
-  "runtime": "9.0",
+  "runtime": "3.0",
   "dependencies": [],
   "idRanges": [
     {
@@ -21,17 +21,12 @@
       "to": 70499
     }
   ],
-  "target":"OnPrem",
+  "target": "Extension",
   "features": [
     "NoImplicitWith",
-    "TranslationFile",
-    "GenerateCaptions"
+    "TranslationFile"
   ],
-  "resourceExposurePolicy": {
-    "allowDebugging": true,
-    "allowDownloadingSource": false,
-    "includeSourceInSymbolFile": false
-  },
+  "showMyCode": true,
   "supportedLocales": [
     "de-DE",
     "en-US"
