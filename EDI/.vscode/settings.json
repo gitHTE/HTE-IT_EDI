@@ -11,10 +11,10 @@
   "al.compilationOptions": {
     // "outFolder": "c:/Temp/"
   },
-  "CRS.FileNamePattern": "<ObjectTypeShort><ObjectId>.<ObjectNameShort>.al",
-  //"CRS.FileNamePatternExtensions": "<ObjectNameShort>-<ObjectId>.<ObjectTypeShortPascalCase>.al",
-  "CRS.FileNamePatternExtensions": "<ObjectTypeShort><BaseId>-Ext<ObjectId>.<ObjectNameShort>.al",
-  "CRS.FileNamePatternPageCustomizations": "<ObjectNameShort>.<ObjectTypeShortPascalCase>.al",
+  "CRS.ExtensionObjectNamePattern": "<Prefix><BaseNameShort>",
+  "CRS.FileNamePattern": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
+  "CRS.FileNamePatternExtensions": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
+  "CRS.FileNamePatternPageCustomizations": "<ObjectName>.<ObjectTypeShortPascalCase>.al",
   "CRS.ObjectNamePrefix": "HIT ",
   "CRS.ObjectNameSuffix": "",
   "CRS.RemovePrefixFromFilename": true,
