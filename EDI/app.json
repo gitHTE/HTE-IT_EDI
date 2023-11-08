@@ -21,7 +21,7 @@
       "to": 70499
     }
   ],
-  "target": "Extension",
+  "target": "Internal",
   "features": [
     "NoImplicitWith",
     "TranslationFile"
