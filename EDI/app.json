@@ -12,8 +12,8 @@
   "logo": "./Logo/HTE_IT_Service.jpg",
   "screenshots": [],
   "platform": "1.0.0.0",
-  "application": "14.0.0.0",
-  "runtime": "3.0",
+  "application": "22.0.0.0",
+  "runtime": "11.0",
   "dependencies": [],
   "idRanges": [
     {
@@ -21,12 +21,17 @@
       "to": 70499
     }
   ],
-  "target": "Internal",
+  "target":"OnPrem",
   "features": [
     "NoImplicitWith",
-    "TranslationFile"
+    "TranslationFile",
+    "GenerateCaptions"
   ],
-  "showMyCode": true,
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
   "supportedLocales": [
     "de-DE",
     "en-US"
