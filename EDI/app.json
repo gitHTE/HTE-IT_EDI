@@ -1,0 +1,39 @@
+{
+  "id": "bd0f90b1-02d4-4246-ae0f-82e54b8801bf",
+  "name": "EDI",
+  "publisher": "HTE IT-Service GmbH",
+  "version": "1.0.0.0",
+  "brief": "",
+  "description": "",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./Logo/HTE_IT_Service.jpg",
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "22.0.0.0",
+  "runtime": "11.0",
+  "dependencies": [],
+  "idRanges": [
+    {
+      "from": 70000,
+      "to": 70499
+    }
+  ],
+  "target": "Cloud",
+  "features": [
+    "NoImplicitWith",
+    "TranslationFile",
+    "GenerateCaptions"
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "supportedLocales": [
+    "de-DE",
+    "en-US"
+  ]
+}

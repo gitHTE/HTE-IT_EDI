@@ -1,0 +1,72 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "HIT EDI - Synchronize",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "https://hit-vpc-MDO-wx.hte-it.com/",
+            "serverInstance": "DBBCV22_HIT-MDO-Entw",
+            "tenant": "default",
+            "port": 7059,
+            "authentication": "Windows",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "dependencyPublishingOption":  "Ignore",
+            "schemaUpdateMode": "Synchronize"
+        },
+        {
+            "name": "HIT EDI - ForceSync",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "https://hit-vpc-MDO-wx.hte-it.com/",
+            "serverInstance": "DBBCV22_HIT-MDO-Entw",
+            "tenant": "default",
+            "port": 7059,
+            "authentication": "Windows",
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "dependencyPublishingOption":  "Ignore",
+            "schemaUpdateMode": "ForceSync"
+        },
+        {
+            "name": "HIT EDI - Test",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "https://hit-vpc-MDO-wx.hte-it.com/",
+            "serverInstance": "DBBCV22_HIT-MDO-Entw",
+            "tenant": "default",
+            "port": 7059,
+            "authentication": "Windows",
+            "startupObjectType":  "Page",
+            "startupObjectId":  130451,
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "dependencyPublishingOption":  "Ignore"
+        },
+        {
+            "name": "HIT EDI - Attach",
+            "request": "attach",
+            "type": "al",
+            "environmentType": "OnPrem",
+            "server": "https://hit-vpc-MDO-wx.hte-it.com/",
+            "serverInstance": "DBBCV22_HIT-MDO-Entw",
+            "tenant": "default",
+            "port": 7059,
+            "authentication": "Windows",
+            "breakOnError": true,
+            "breakOnNext": "WebClient",
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true
+        }
+    ]
+}

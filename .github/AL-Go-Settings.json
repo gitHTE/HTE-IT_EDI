@@ -1,4 +1,7 @@
 {
   "type": "PTE",
-  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@main"
+  "templateUrl": "https://github.com/microsoft/AL-Go-PTE@main",
+  "artifact": "https://bcartifacts.azureedge.net/onprem/22.6.60909.0/de",
+  "useCompilerFolder": false,
+  "doNotPublishApps": false
 }
